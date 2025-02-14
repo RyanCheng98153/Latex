@@ -24,12 +24,10 @@
 \section{Introduction}
 This is an example document to create TikZ graphs.
 
-\section{TikZ Graph}
-
-
-\begin{tikzpicture}[scale=0.8, transform shape]
+\section{Previous CAG TikZ Graph}
+\begin{tikzpicture}[scale=0.45, transform shape]
     % Your TikZ code goes here
-    \node[draw, box] at (0, 0) (knowledge) {\large Knowledge};
+    \node[draw, box] at (0, 0) (knowledge) {\large Knowledge Source};
     \node[
         draw, box, text width=2cm, minimum height=2.5cm, minimum width=2cm, align=center
     ] at (2.5, 3) (retrieval_model) {\large Retrieval Model};
@@ -59,8 +57,8 @@ This is an example document to create TikZ graphs.
     \draw[<-, bend left] (retrieve_Q2) to (Q2_left);
     \draw[->, bend right] (retrieve_K2) to (K2_left);
 
-    \node (LLM1) [box, minimum height=1.2cm, minimum width=2.8cm, align=center, right=2cm of Q1, yshift=0.25cm] {\large LLM};
-    \node (LLM2) [box, minimum height=1.2cm, minimum width=2.8cm, align=center, right=2cm of K2, yshift=-0.25cm] {\large LLM};
+    \node (LLM1) [box, minimum height=1.2cm, minimum width=2.8cm, align=center, right=2cm of Q1, yshift=0.25cm] {LLM};
+    \node (LLM2) [box, minimum height=1.2cm, minimum width=2.8cm, align=center, right=2cm of K2, yshift=-0.25cm] {LLM};
     
     \coordinate (LLM1_Arrow_start) at ($(retrieval_model.east) + (1.8cm, 1.1cm)$);
     \coordinate (LLM1_Arrow_end) at ($(retrieval_model.east) + (3.1cm, 1.1cm)$);
@@ -86,14 +84,15 @@ This is an example document to create TikZ graphs.
 
     \node[
         draw, box, text width=2cm, minimum height=2cm, minimum width=3.5cm, align=center
-    ] at (3, -4) (LLM1) {};
+    ] at (3, -3) (LLM1) {};
     \node at ($(LLM1) + (-1.2cm, 0.7cm)$) (LLM1_tx) {LLM};
     \node[
         draw, box, text width=2cm, minimum height=1.2cm, minimum width=2cm, align=center
     ] at ($(LLM1) + (-0.3cm, -0.25cm)$) (knowledge_cache) {\large Knowledge Cache};
     
-    \draw[<->, latex-latex, line width=0.3mm, bend right] (knowledge) to (knowledge_cache);
-    \node at ($(knowledge_cache) + (-1.4cm, 2.2cm)$) (Precompute) {Pre-compute};
+    \draw[->, -latex, line width=0.3mm, bend right] (knowledge) to (knowledge_cache);
+
+    \node at ($(knowledge_cache) + (-1.4cm, 2cm)$) (Precompute) {Pre-compute};
     
     \node[
         draw, box, text width=0.5cm, minimum height=1.5cm, minimum width=0.5cm, align=center
@@ -109,7 +108,7 @@ This is an example document to create TikZ graphs.
 
     \node[
         draw, box, text width=2cm, minimum height=2cm, minimum width=3.5cm, align=center
-    ] at (9, -4) (LLM2) {};
+    ] at (9, -3) (LLM2) {};
     \node at ($(LLM2) + (-1.2cm, 0.7cm)$) (LLM2_tx) {LLM};
     \node[
         draw, box, text width=2cm, minimum height=1.2cm, minimum width=2cm, align=center
@@ -138,7 +137,7 @@ This is an example document to create TikZ graphs.
 
     \node[
         draw, box, text width=2cm, minimum height=2cm, minimum width=3.5cm, align=center
-    ] at (15, -4) (LLM3) {};
+    ] at (15, -3) (LLM3) {};
     \node at ($(LLM3) + (-1.2cm, 0.7cm)$) (LLM3_tx) {LLM};
     \node[
         draw, box, text width=2cm, minimum height=1.2cm, minimum width=2cm, align=center
@@ -160,10 +159,119 @@ This is an example document to create TikZ graphs.
 
     \draw[-latex, line width=0.3mm] ($(LLM2_A2.south) + (0cm, -0.6cm)$) to (LLM2_A2.south);
     
-    % \node (CAG_AREA) [draw, rectangle, minimum height=7cm, minimum width=17cm, xshift=0.25cm, dashed]
-    %     at (9cm, -4.2cm){};
+\end{tikzpicture}
+
+
+\section{CAG TikZ Graph}
+\begin{tikzpicture}[scale=1, transform shape]
+    % --- RAG ---
+
+    % IR Model
+    \node[
+        draw, box, text width=2cm, minimum height=1.2cm, minimum width=2cm, align=center
+    ] at (2.5, 1.6) (ir_model) {\large IR Model};
     
+    % query on the left of IR Model
+    \node[
+        text width=1cm, minimum height=1cm, minimum width=1cm, align=center
+    ] at ($(ir_model.center) + (-3cm, 0cm)$) (query) {Query};
+    % \node at (0, 3) {Query}; 
+
+    % arrow from query to IR Model
+    \draw[->, line width=0.3mm] (query) to (ir_model);
+
+    % knowledge source on the top of IR Model
+    \node[
+        draw, box, text width=2cm, minimum height=1.2cm, minimum width=2.8cm, align=center
+    ] at ($(ir_model.north) + (0cm, 1.2cm)$) (knowledge_source) {\large Knowledge Source};
     
+    % arrow from knowledge source to IR Model
+    \draw[<->, line width=0.3mm] (knowledge_source) to (ir_model);
+
+    % LLM box on the right of IR Model
+    \node[
+        draw, box, minimum height=1.8cm, minimum width=3.2cm, align=center
+    ] at ($(ir_model.east) + (2.8cm, 0cm)$) (LLM_box) {};
+
+    % LLM text on the top of LLM box
+    \node at ($(LLM_box.north) + (0cm, -0.3cm)$) (LLM_text) {LLM};
+
+    % knowledge on the bottom of LLM box
+    \node[
+        draw, box, text width=1.8cm, minimum height=1cm, minimum width=1.8cm, align=center
+    ] at ($(LLM_box.south) + (-0.4cm, +0.6cm)$) (knowledge) {Knowledge};
+
+    % arrow from IR Model + (0, -0.3) to knowledge
+    \draw[->, line width=0.3mm] ($(ir_model.east) + (0cm, -0.3cm)$) |- (knowledge.west);
+
+    % a q box on the right of knowledge
+    \node[
+        draw, box, text width=0.4cm, minimum height=1cm, minimum width=0.4cm, align=center
+    ] at ($(knowledge.east) + (0.5cm, 0cm)$) (q) {Q};
+
+    % arrow from Query to q, but make it go from buttom to right to top
+    \draw[->, line width=0.3mm] 
+    ($(query.east) + (1.2cm, 0cm) $) -| ($(query.south) + (1.2cm, -0.8cm)$) -| (q.south);
+    % \draw[->] (A.east) |- (B.west);
+
+    % a response box on the right of LLM box
+    \node[
+        draw, box, text width=0.4cm, minimum height=1cm, minimum width=0.4cm, align=center
+    ] at ($(LLM_box.east) + (1.2cm, 0cm)$) (response) {R};
+
+    % arrow from LLM box to response
+    \draw[->, line width=0.3mm] (LLM_box.east) to (response);
+    
+    % --- Seperator between RAG and CAG ---
+    \draw[line width=0.3mm, dashed] (-1.2cm, -0.4cm) to (10cm, -0.4cm);
+
+    % --- CAG ---
+
+    % Knowledge Source
+    \node[
+        draw, box, text width=2cm, minimum height=1.2cm, minimum width=2.8cm, align=center
+    ] at (2, -1.6) (knowledge_source) {\large Knowledge Source};
+    
+    % query on the left of Knowledge Source
+    \node[
+        text width=1cm, minimum height=1cm, minimum width=1cm, align=center
+    ] at ($(knowledge_source.center) + (-2.5cm, -0.5cm)$) (query) {Query};
+    % \node at (0, 3) {Query}; 
+
+    % LLM box on the right of knowledge source
+    \node[
+        draw, box, minimum height=1.8cm, minimum width=3.2cm, align=center
+    ] at ($(knowledge_source.east) + (3cm, -0.5cm)$) (LLM_box) {};
+
+    % LLM text on the top of LLM box
+    \node at ($(LLM_box.north) + (0cm, -0.3cm)$) (LLM_text) {LLM};
+
+    % knowledge on the bottom of LLM box
+    \node[
+        draw, box, text width=1.8cm, minimum height=1cm, minimum width=1.8cm, align=center
+    ] at ($(LLM_box.south) + (-0.4cm, +0.6cm)$) (knowledge_cache) {Knowledge Cache};
+
+    % arrow from Knowlege Source + (0, -0.3) to knowledge with a explaination text below
+    \draw[->, line width=0.3mm, dashed] ($(knowledge_source.south) + (-0.6cm, +0cm)$)
+        |- node[text width=4cm, pos=0.7, below] {\large offline pre-computing}
+        ($(knowledge_cache.west) + (0cm, -0.2cm)$);
+
+    % a q box on the right of knowledge_cache
+    \node[
+        draw, box, text width=0.4cm, minimum height=1cm, minimum width=0.4cm, align=center
+    ] at ($(knowledge_cache.east) + (0.5cm, 0cm)$) (q) {Q};
+
+    % arrow from Query to q, but make it go from buttom to right to top
+    \draw[->, line width=0.3mm] 
+    (query.south) -| ($(query.south) + (0cm, -1cm)$) -| (q.south);
+
+    % a response box on the right of LLM box
+    \node[
+        draw, box, text width=0.4cm, minimum height=1cm, minimum width=0.4cm, align=center
+    ] at ($(LLM_box.east) + (1.2cm, 0cm)$) (response) {R};
+
+    % arrow from LLM box to response
+    \draw[->, line width=0.3mm] (LLM_box.east) to (response);
 
 \end{tikzpicture}
 
