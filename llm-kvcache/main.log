@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.2.10)  15 FEB 2025 02:23
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.2.10)  18 FEB 2025 16:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -288,19 +288,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 22.
  [1
 
-] [2] (main.aux)
+] (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) [2] [3] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12980 strings out of 409673
- 276552 string characters out of 5774907
+ 13312 strings out of 409673
+ 285326 string characters out of 5774907
  1935630 words of memory out of 5000000
- 34833 multiletter control sequences out of 15000+600000
- 560845 words of font info for 50 fonts, out of 8000000 for 9000
+ 35157 multiletter control sequences out of 15000+600000
+ 560853 words of font info for 51 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,6n,107p,451b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,107p,451b,669s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (2 pages, 43076 bytes).
+Output written on main.xdv (3 pages, 66688 bytes).

@@ -276,4 +276,85 @@ This is an example document to create TikZ graphs.
 \end{tikzpicture}
 
 
+\section{CAG TikZ Graph with Cache}
+
+\usetikzlibrary{patterns, positioning}
+\begin{tikzpicture}[scale=1, transform shape]
+    % Style for bars
+    \tikzstyle{bar} = [draw, minimum width=0.1cm, minimum height=0.1cm, anchor=west]
+    \def\fullwidth{5cm}
+    \def\ir-color{blue!30}
+    \def\gen-color{red!30}
+    \tikzstyle{label}=[anchor=east, minimum height=0.1cm,
+    minimum width=2cm, text width=3cm]
+    
+    % Labels
+    \node[label] at (0, 0) {\textbf{Sparse RAG, Top-3}};
+    \node[label] at (0, -0.5) {\textbf{Sparse RAG, Top-10}};
+    \node[label] at (0, -1) {\textbf{Dense RAG, Top-3}};
+    \node[label] at (0, -1.5) {\textbf{Dense RAG, Top-10}};
+    \node[label] at (0, -2) {\textbf{CAG}};
+    \node at (1, -2.5) {\textbf{HotPotQA (Small)}};
+    
+    \node[label] at (0, -3.2) {\textbf{Sparse RAG, Top-3}};
+    \node[label] at (0, -3.7) {\textbf{Sparse RAG, Top-10}};
+    \node[label] at (0, -4.2) {\textbf{Dense RAG, Top-3}};
+    \node[label] at (0, -4.7) {\textbf{Dense RAG, Top-10}};
+    \node[label] at (0, -5.2) {\textbf{CAG}};
+    \node at (1, -5.7) {\textbf{HotPotQA (Medium)}};
+    
+    \node[label] at (0, -6.4) {\textbf{Sparse RAG, Top-3}};
+    \node[label] at (0, -6.9) {\textbf{Sparse RAG, Top-10}};
+    \node[label] at (0, -7.4) {\textbf{Dense RAG, Top-3}};
+    \node[label] at (0, -7.9) {\textbf{Dense RAG, Top-10}};
+    \node[label] at (0, -8.4) {\textbf{CAG}};
+    \node at (1, -8.9) {\textbf{HotPotQA (Large)}};
+    % Small BM25 top-3 bars
+    \node[bar, minimum width=0.214*\fullwidth, fill=\gen-color] (sm-bm25-top3-gen) at (0, 0) {};
+    % Small BM25 top-10 bars
+    \node[bar, minimum width=0.489*\fullwidth, fill=\gen-color] (sm-bm25-top10-gen) at (0, -0.5) {};
+    % Small Dense top-3 bars
+    \node[bar, minimum width=0.146*\fullwidth, fill=\ir-color] (sm-dense-top3-ir) at (0, -1) {};
+    \node[bar, minimum width=0.3*\fullwidth, fill=\gen-color, right=0mm of sm-dense-top3-ir] (sm-dense-top3-gen) {};
+    % Small Dense top-10 bars
+    \node[bar, minimum width=0.16*\fullwidth, fill=\ir-color] (sm-dense-top10-ir) at (0, -1.5) {};
+    \node[bar, minimum width=0.3*\fullwidth, fill=\gen-color, right=0mm of sm-dense-top10-ir] (sm-dense-top10-gen) {};
+    % Small CAG bars
+    \node[bar, minimum width=0.249*\fullwidth, fill=\gen-color] (sm-cag-gen) at (0, -2) {};
+    
+    % Medium BM25 top-3 bars
+    \node[bar, minimum width=0.211*\fullwidth, fill=\gen-color] (md-bm25-top3-gen) at (0, -3.2) {};
+    % Medium BM25 top-10 bars
+    \node[bar, minimum width=0.491*\fullwidth, fill=\gen-color] (md-bm25-top10-gen) at (0, -3.7) {};
+    % Medium Dense top-3 bars
+    \node[bar, minimum width=0.159*\fullwidth, fill=\ir-color] (md-dense-top3-ir) at (0, -4.2) {};
+    \node[bar, minimum width=0.295*\fullwidth, fill=\gen-color, right=0mm of md-dense-top3-ir] (md-dense-top3-gen) {};
+    % Medium Dense top-10 bars
+    \node[bar, minimum width=0.156*\fullwidth, fill=\ir-color] (md-dense-top10-ir) at (0, -4.7) {};
+    \node[bar, minimum width=0.844*\fullwidth, fill=\gen-color, right=0mm of md-dense-top10-ir] (md-dense-top10-gen) {};
+    % Medium CAG bars
+    \node[bar, minimum width=0.410*\fullwidth, fill=\gen-color] (md-cag-gen) at (0, -5.2) {};
+
+    % Large BM25 top-3 bars
+    \node[bar, minimum width=0.215*\fullwidth, fill=\gen-color] (lg-bm25-top3-gen) at (0, -6.4) {};
+    % Large BM25 top-10 bars
+    \node[bar, minimum width=0.490*\fullwidth, fill=\gen-color] (lg-bm25-top10-gen) at (0, -6.9) {};
+    % Large Dense top-3 bars
+    \node[bar, minimum width=0.133*\fullwidth, fill=\ir-color] (lg-dense-top3-ir) at (0, -7.4) {};
+    \node[bar, minimum width=0.301*\fullwidth, fill=\gen-color, right=0mm of lg-dense-top3-ir] (lg-dense-top3-gen) {};
+    % Large Dense top-10 bars
+    \node[bar, minimum width=0.132*\fullwidth, fill=\ir-color] (lg-dense-top10-ir) at (0, -7.9) {};
+    \node[bar, minimum width=0.854*\fullwidth, fill=\gen-color, right=0mm of lg-dense-top10-ir] (lg-dense-top10-gen) {};
+    % Large CAG bars
+    \node[bar, minimum width=0.731*\fullwidth, fill=\gen-color] (lg-cag-gen) at (0, -8.4) {};
+
+    % Legend (placed to the right of the bars)
+    \node[draw, fill=\ir-color, minimum width=0.1cm, minimum height=0.1cm, right=2cm of sm-bm25-top3-gen] (legend1) {};
+    \node[anchor=west] at ([xshift=0.2cm]legend1.east) {Retrieval time};
+
+    \node[draw, fill=\gen-color, minimum width=0.1cm, minimum height=0.1cm, below=0.2cm of legend1] (legend2) {};
+    \node[anchor=west] at ([xshift=0.2cm]legend2.east) {Generation time};
+\end{tikzpicture}
+
+
 \end{document}
