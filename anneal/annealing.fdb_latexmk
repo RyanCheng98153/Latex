@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1708339014.80985 "annealing.xdv" "annealing.pdf" "annealing" 1708339015.17264 0
-  "annealing.xdv" 1708339014 55416 5f793a5b619a67774177c76f2452ec2b "xelatex"
+["xdvipdfmx"] 1740984212.29217 "annealing.xdv" "annealing.pdf" "annealing" 1740984212.87024 0
+  "annealing.xdv" 1740984212 64460 5bf422c9331c4ceaa6015ee57b8a03b0 "xelatex"
   (generated)
   "annealing.pdf"
   (rewritten before read)
-["xelatex"] 1708339013.64213 "e:/project/Latex/anneal/annealing.tex" "annealing.xdv" "annealing" 1708339015.16372 0
+["xelatex"] 1740984210.48794 "e:/project/Latex/anneal/annealing.tex" "annealing.xdv" "annealing" 1740984212.86192 0
   "C:/Users/User/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1707500278 37530692 7a96a70aaf7fa60fdaa0265bcad91fc6 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1233951848 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -118,6 +118,9 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/generic/xypic/xyrecat.tex" 1381022313 1391 c8763fc8e281cb6ecf697988b6608e4a ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/generic/xypic/xyrotate.tex" 1381022313 7008 cb768d8d63a12d35607cbb3c4e7ba163 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/generic/xypic/xytips.tex" 1381022313 3689 0d51788a4141bc66ab896f7ac63495fd ""
+  "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/algorithmicx/algorithmicx.sty" 1114606800 26750 ce139c05a983e19ddca355b43e29c395 ""
+  "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/algorithmicx/algpseudocode.sty" 1114606920 3457 d9077efe6b74c5a094199256af8d7d9a ""
+  "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/algorithms/algorithm.sty" 1251549064 3349 15763257e50278eef5db1952ccde229c ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty" 1358197772 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty" 1358197772 13829 94730e64147574077f8ecfea9bb69af4 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd" 1358197772 961 6518c6525a34feb5e8250ffa91731cff ""
@@ -129,11 +132,13 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty" 1686931788 2444 0d0c1ee65478277e8015d65b86983da2 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1705273579 20144 147463a6a579f4597269ef9565205cfe ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty" 1705273578 5119 a04a8b68ab4f6ce800a41f7f8012a10e ""
+  "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty" 1705273578 5319 2b738d02ce36ada6dcdd9534940db0ee ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo" 1705273578 8449 f07039d8e4e89f21078d9b5137579bfc ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd" 1705273578 2430 fce77d7e103eb98b6c4d486ae1d466c0 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/cjk/CJKfntef.sty" 1670582841 12851 25a9b5cc006609feb5c9a20ce24a5392 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/ctex/ctexhook.sty" 1657818410 6505 33157acfddefdd8fd513e2308e07a435 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty" 1668504483 18450 88279bf67c81e69f8e3f1c1bad1a26c5 ""
+  "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-xetex.sty" 1642213122 162076 2f6d31c4632f2730c57b9c0fda038e15 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg" 1642213122 549 c4adac819276241fea8eb79c5ab7b99e ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty" 1642213122 1656 7e824878bad4df5a3e8bba4e463d9126 ""
@@ -168,11 +173,11 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
-  "annealing.aux" 1708339014 1847 1c55a54b1765debc6d0f4854df8392b1 "xelatex"
-  "annealing.tex" 1708339011 11507 09de04f6069cf39887511dddc8a9d203 ""
-  "e:/project/Latex/anneal/annealing.tex" 1708339011 11507 09de04f6069cf39887511dddc8a9d203 ""
-  "m.pdf" 1708337636 11835 61e05c3261a87b8d1264d1cfd2a639eb ""
-  "triangle.pdf" 1708337905 8835 d441efba5207ff9761e664f1a1aa086a ""
+  "annealing.aux" 1740984212 2159 a086566d3d5d015d0ea7de1c9fdebb37 "xelatex"
+  "annealing.tex" 1740984209 13216 72a2529cb842dc32026805f073108ddc ""
+  "e:/project/Latex/anneal/annealing.tex" 1740984209 13216 72a2529cb842dc32026805f073108ddc ""
+  "m.pdf" 1734536766 11835 61e05c3261a87b8d1264d1cfd2a639eb ""
+  "triangle.pdf" 1734536766 8835 d441efba5207ff9761e664f1a1aa086a ""
   (generated)
   "annealing.aux"
   "annealing.log"

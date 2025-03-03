@@ -17,6 +17,10 @@
 \usepackage{graphicx}
 \usepackage[all,knot,poly]{xy}
 \usepackage{titlesec}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
 
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
@@ -155,12 +159,7 @@ $c^T$ 為$N$ 維列實向量，目標在於找出最佳的$\bm{x}$ 使得目標�
 因為我們使用的量子退火演算法起源於處理量子自旋模型，所開發的退火工具包也將適用解決超越上述的二次無約束二元最佳化問題，
 能進一步探索量子系統。     
 
-
-
-
 \section{文獻回顧與探討}
-
-
 
 %\begin{itemize}
 %\item[{\bf 1.}] 模擬退火法 (Simulated Annealing, SA)
@@ -181,18 +180,70 @@ $c^T$ 為$N$ 維列實向量，目標在於找出最佳的$\bm{x}$ 使得目標�
 %\item[{\bf 4.}] 隨機級數展開法 (Stochastic Series Expansion)
 %\item[{\bf 5.}] 副本交換 (Replica Exchange) / 平行退火 (Parallel Tempering)
 %\end{itemize}
+
 \subsection*{模擬退火法 (Simulated Annealing, SA)}
 此方法模擬物理的退火過程，即將材料加熱然後使之緩慢冷卻的過程，極度緩慢冷卻可減少缺陷產生，即降低系統的能量。
 1983年由 Kirkpatrick 等人將這個方法結合 Metropolis 蒙地卡羅的模擬，應用在組合最佳化問題。
 以 QUBO 問題為例， 
 
+\subsection*{Algorithm}
 
+\begin{algorithm}
+\caption{Simulated Annealing}\label{alg:SA}
+\begin{algorithmic}
+    \State $s \gets s_0$
+\While {$k =0$ through $k_{max}$ (exclusive)}:
+    \State $T \gets temperature(~ 1 - \frac{k+1}{k_{max}} ~)$
+    \State Pick a random neighbour, $s_{new} \gets neighbour(s)$
+\If{$P(~E(s), E(s_{new}~),~T) \geq {random}(0, 1$)} 
+    \State $s \gets s_{new}$
+\EndIf
+\EndWhile
+    \State Output: the final state: $s$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Replica Exchange}\label{alg:cap}
+\begin{algorithmic}
+\Require $myrank \geq 0$, $cmpSrc$, $deltaSFunc$
+\State $src_a \gets 0$, $src_b \gets 0$
+\State $src_a \gets myrank$, $src_b \gets myrank$ \Comment{Initialize $src_a \& src_b$}
+\State $isSwap$ = $false$ \Comment{Initializa $isSwap$ to $false$}
+\If{$myrank$ is even}
+    \State $src_b \gets myrank + 1$
+\Else
+    \State $src_a \gets myrank - 1$
+\EndIf
+
+\If{$myrank = src_a$} \Comment{$src_b$ will decide whether change the config or not}
+    \State Send $cmpSrc$ to $src_b$
+    \State Receive $isSwap$
+    \If{$isSwap$}
+        \State send config to $src_b$ \& receive the config from $src_b$
+    \EndIf
+\ElsIf{$myrank = src_b$}
+    \State Receive $cmpSrc$ from $src_a$ as $cmpSrc_a$
+    \State $isSwap = cmpSrc(cmpSrc_a, cmpSrc_b, deltaSFunc)$ 
+    \State \Comment{$deltaSFunc$ is the function to determine the swap probability}
+    \State Send $isSwap$
+    \If{$isSwap$}
+        \State send config to $src_b$ \& receive the config from $src_b$
+    \EndIf
+\EndIf
+
+\If{$isSwap$}
+    \State Update the config
+\EndIf
+
+\end{algorithmic}
+\end{algorithm}
 
 在執行進度上，我已完成模擬退火法、部分完成模擬量子退火法及平行退火的程式，
 也已建構使用者輸入 QUBO 問題的格式，包含二元變數 $\{+1, -1\}$ 及 ${0 , 1}$ 的轉換。 
 
-\section{預期結果}
 
+\section{預期結果}
 
 本計畫開發的退火工具包因為針對二次無約束二元最佳化問題設計，可應用的範疇很廣，
 除了前面敘述的物理模型，還可列舉圖形切割問題、.....

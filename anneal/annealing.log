@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.2.10)  19 FEB 2024 18:36
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.2.10)  3 MAR 2025 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -568,126 +568,159 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidth=\dimen329
 \titlewidthlast=\dimen330
 \titlewidthfirst=\dimen331
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count331
+\float@exts=\toks43
+\float@box=\box72
+\@float@everytoks=\toks44
+\@floatcapt=\box73
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks45
+\c@algorithm=\count332
+) (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+ (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count333
+\c@ALG@rem=\count334
+\c@ALG@nested=\count335
+\ALG@tlm=\skip72
+\ALG@thistlm=\skip73
+\c@ALG@Lnr=\count336
+\c@ALG@blocknr=\count337
+\c@ALG@storecount=\count338
+\c@ALG@tmpcounter=\count339
+\ALG@tmplength=\skip74
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (annealing.aux)
 \openout1 = `annealing.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 54.
  (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 50.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 50.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 50.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 50.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 50.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 50.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 50.
-LaTeX Font Info:    Redeclaring math accent \check on input line 50.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 50.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 50.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 50.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 50.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 54.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 54.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 54.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 54.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 54.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 54.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 54.
+LaTeX Font Info:    Redeclaring math accent \check on input line 54.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 54.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 54.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 54.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 54.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 50.
+(Font)              `operators' in the math version `normal' on input line 54.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 50.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 54.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 50.
+(Font)              `operators' in the math version `bold' on input line 54.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 50.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 54.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 50.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 50.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 50.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 50.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 50.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 54.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 50.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 50.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 50.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 54.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 50.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 54.
 File: triangle.pdf Graphic file (type pdf)
 <use triangle.pdf>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
  (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
  (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
 
-LaTeX Warning: Citation `Wannier' on page 2 undefined on input line 105.
+LaTeX Warning: Citation `Wannier' on page 2 undefined on input line 109.
 
 
-LaTeX Warning: Citation `Jiang' on page 2 undefined on input line 105.
-
-
-LaTeX Warning: Citation `Moessner' on page 2 undefined on input line 107.
-
-
-LaTeX Warning: Citation `Moessner' on page 2 undefined on input line 109.
+LaTeX Warning: Citation `Jiang' on page 2 undefined on input line 109.
 
 
 LaTeX Warning: Citation `Moessner' on page 2 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Moessner' on page 2 undefined on input line 113.
+
+
+LaTeX Warning: Citation `Moessner' on page 2 undefined on input line 115.
 
 [2]
 File: m.pdf Graphic file (type pdf)
 <use m.pdf>
 
 
-LaTeX Warning: Citation `Sandvik_Nat' on page 3 undefined on input line 139.
+LaTeX Warning: Citation `Sandvik_Nat' on page 3 undefined on input line 143.
 
 
-LaTeX Warning: Citation `Huang' on page 3 undefined on input line 139.
+LaTeX Warning: Citation `Huang' on page 3 undefined on input line 143.
 
 
-LaTeX Warning: Citation `He' on page 3 undefined on input line 142.
+LaTeX Warning: Citation `He' on page 3 undefined on input line 146.
 
-[3] [4] [5] 
+[3] [4] [5] [6] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (annealing.aux)
  ***********
@@ -700,12 +733,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21163 strings out of 409673
- 466083 string characters out of 5774907
+ 21853 strings out of 409673
+ 476685 string characters out of 5774907
  1945630 words of memory out of 5000000
- 42845 multiletter control sequences out of 15000+600000
+ 43520 multiletter control sequences out of 15000+600000
  567626 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,12n,107p,444b,261s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,444b,314s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on annealing.xdv (5 pages, 55416 bytes).
+Output written on annealing.xdv (6 pages, 64460 bytes).
