@@ -1,0 +1,7 @@
+% \node[
+%     draw, box, text width=2cm, minimum height=2.5cm, minimum width=2cm, align=center
+% ] at (2.5, 3) (retrieval_model) {\large Retrieval Model};
+
+% \draw[<->, latex-latex, line width=0.3mm, bend left] (0cm, 0cm) to (retrieval_model);
+
+% \coordinate (retrieve_Q1) at ($(retrieval_model.east) + (0cm, 1cm)$);
