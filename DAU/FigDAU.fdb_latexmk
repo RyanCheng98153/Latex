@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1708184811.31122 "FigDAU.xdv" "FigDAU.pdf" "FigDAU" 1708184811.62404 0
-  "FigDAU.xdv" 1708184811 134720 e9e7be08f64cf4dbfb7c56680c6d730b "xelatex"
+["xdvipdfmx"] 1742312131.20067 "FigDAU.xdv" "FigDAU.pdf" "FigDAU" 1742312131.4942 0
+  "FigDAU.xdv" 1742312131 134688 840c66c75ec2f26feb76e3a47f3cb4f6 "xelatex"
   (generated)
   "FigDAU.pdf"
   (rewritten before read)
-["xelatex"] 1708184809.66776 "e:/project/Latex/DAU/FigDAU.tex" "FigDAU.xdv" "FigDAU" 1708184811.617 0
+["xelatex"] 1742312129.41747 "e:/project/Latex/DAU/FigDAU.tex" "FigDAU.xdv" "FigDAU" 1742312131.49056 0
   "C:/Users/User/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1707500278 37530692 7a96a70aaf7fa60fdaa0265bcad91fc6 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -101,9 +101,9 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
-  "FigDAU.aux" 1708184811 547 fbe50d1fd23fa7a633c61ccb77e17746 "xelatex"
-  "FigDAU.tex" 1708184809 5854 c9522d9782d69c39d713c6d81fcdf2d1 ""
-  "e:/project/Latex/DAU/FigDAU.tex" 1708184809 5854 c9522d9782d69c39d713c6d81fcdf2d1 ""
+  "FigDAU.aux" 1742312131 547 fbe50d1fd23fa7a633c61ccb77e17746 "xelatex"
+  "FigDAU.tex" 1742312126 5659 40e4c7eebeac13ce248ee1a88353e17c ""
+  "e:/project/Latex/DAU/FigDAU.tex" 1742312126 5659 40e4c7eebeac13ce248ee1a88353e17c ""
   (generated)
   "FigDAU.aux"
   "FigDAU.log"
