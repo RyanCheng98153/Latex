@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{tikz}
+\usepackage{pgfmath}
 \usetikzlibrary{positioning}
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes.geometric, arrows, positioning}
@@ -9,7 +10,7 @@
 \begin{document}
 
 \title{TikZ Graph Example}
-\author{Cheng, Jui-Hung}
+\author{Ch}
 \date{March 19, 2025}
 
 \maketitle
@@ -78,4 +79,38 @@ This is an example document to create TikZ graphs.
     \draw[thick, -latex, line width=0.5mm, draw=black] ($(N4_3) + (-1cm, -1.5cm)$) -- ($(N4_9) + (1cm, -1.5cm)$);
 
 \end{tikzpicture}
+
+\section{Annealer Explanation}
+\begin{tikzpicture} [scale=1, transform shape]
+    % Make a mind map for Hybrid Annealer to Simulated Annealer and Stochastic Series Expansion Annealer
+    \node (HA) [draw, rectangle, draw=white] at (0, 0) {Hybrid Annealer};
+    \node (SA) [draw, rectangle, draw=white, anchor=west] at ($(HA) + (3cm, 1cm)$) {Simulated Annealer};
+    \node (SSA) [draw, rectangle, draw=white, anchor=west] at ($(HA) + (3cm, -1cm)$) {Stochastic Series Expansion Annealer};
+
+    \draw[-latex] (HA.east) to[out=0, in=180, looseness=2] (SA.west);
+    \draw[-latex] (HA.east) to[out=0, in=180, looseness=2] (SSA.west);
+
+\end{tikzpicture}
+
+\section{Maple leaf Graph}
+\begin{tikzpicture} [scale=1, transform shape]
+    % Make me a Maple leaf nodes graph using forloop and if statement
+    \tikzstyle{round} = [draw=black, circle, minimum size=0.2cm]
+    
+    % make a round nodes matrix of start at (0, 0) and spaced 1cm using forloop
+    \foreach \y in {0, 1, ..., 4} {
+        \foreach \x in {1, 2, ..., 9} {
+            \node (N\y_\x) [
+                round, fill=black!30!white
+            ] at ($(0cm, 0cm) + (\x*1 + \y*0.5, {\y * sqrt(3) /2})$) {};
+
+            % if (x+y+1) mod 3 == 0, then fill the node with red color
+            % if (x+y+1) mod 3 == 1, then fill the node with blue color
+            % if (x+y+1) mod 3 == 2, then fill the node with black color
+        }
+    }
+
+    
+\end{tikzpicture}
+
 \end{document}
