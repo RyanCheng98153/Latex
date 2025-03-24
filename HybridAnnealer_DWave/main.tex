@@ -4,6 +4,7 @@
 \usepackage{pgfmath}
 \usetikzlibrary{positioning}
 \usetikzlibrary{calc}
+\usepackage{intcalc}
 \usetikzlibrary{shapes.geometric, arrows, positioning}
 
 %%
@@ -98,15 +99,44 @@ This is an example document to create TikZ graphs.
     \tikzstyle{round} = [draw=black, circle, minimum size=0.2cm]
     
     % make a round nodes matrix of start at (0, 0) and spaced 1cm using forloop
-    \foreach \y in {0, 1, ..., 4} {
-        \foreach \x in {1, 2, ..., 9} {
+    \foreach \y in {0, 1, ..., 6} {
+        \foreach \x in {0, 1, ..., 8} {
             \node (N\y_\x) [
-                round, fill=black!30!white
+                round, fill=black!50!white
             ] at ($(0cm, 0cm) + (\x*1 + \y*0.5, {\y * sqrt(3) /2})$) {};
+        
+            % if (x+y+1) mod 3 == 0, then fill the node with blue color
+            \pgfmathtruncatemacro{\modval}{mod(2*\x+\y+2, 3)} % Compute (x+y) mod 3
+            \ifnum\modval=0
+                \node (N\y_\x) [
+                    round, fill=blue!50!white
+                ] at ($(0cm, 0cm) + (\x*1 + \y*0.5, {\y * sqrt(3) /2})$) {};
+            \fi
 
-            % if (x+y+1) mod 3 == 0, then fill the node with red color
-            % if (x+y+1) mod 3 == 1, then fill the node with blue color
-            % if (x+y+1) mod 3 == 2, then fill the node with black color
+            % if (x+y+1) mod 3 == 1, then fill the node with red color
+            \pgfmathtruncatemacro{\modval}{mod(2*\x+\y+2, 3)} % Compute (x+y) mod 3
+            \ifnum\modval=1
+                \node (N\y_\x) [
+                    round, fill=red!50!white
+                ] at ($(0cm, 0cm) + (\x*1 + \y*0.5, {\y * sqrt(3) /2})$) {};
+            \fi
+            
+            % if (x+y+1) mod 3 == 2, then fill the node with green color
+            \pgfmathtruncatemacro{\modval}{mod(2*\x+\y+2, 3)} % Compute (x+y) mod 3
+            \ifnum\modval=2
+                \node (N\y_\x) [
+                    round, fill=green!50!white
+                ] at ($(0cm, 0cm) + (\x*1 + \y*0.5, {\y * sqrt(3) /2})$) {};
+            \fi
+
+            % if y - 3x % 7 == 0, then make the node empty
+            \pgfmathtruncatemacro{\modval}{mod(\x + 3*\y +3, 7)} % Compute (y - 3x) mod 7
+            \ifnum\modval=0
+                \node (N\y_\x) [
+                    round, draw=white,
+                    fill=white, minimum size=0.4cm
+                ] at ($(0cm, 0cm) + (\x*1 + \y*0.5, {\y * sqrt(3) /2})$) {};
+            \fi
         }
     }
 
