@@ -104,7 +104,7 @@ This is an example document to create TikZ graphs.
             \node (N\y_\x) [
                 round, fill=black!50!white
             ] at ($(0cm, 0cm) + (\x*1 + \y*0.5, {\y * sqrt(3) /2})$) {};
-        
+            
             % if (x+y+1) mod 3 == 0, then fill the node with blue color
             \pgfmathtruncatemacro{\modval}{mod(2*\x+\y+2, 3)} % Compute (x+y) mod 3
             \ifnum\modval=0
